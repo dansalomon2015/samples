@@ -3,11 +3,7 @@ import { SafeAreaView, StyleSheet } from "react-native";
 import { Carousel } from "./Carousel";
 
 const App = () => {
-    return (
-        <SafeAreaView style={{}}>
-            <Carousel />
-        </SafeAreaView>
-    );
+    return <Carousel />;
 };
 
 const styles = StyleSheet.create({});
