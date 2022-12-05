@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "jsx": "react-native",
+        "lib": ["es2017"],
+        "moduleResolution": "node",
+        "noEmit": true,
+        "strict": true,
+        "target": "esnext",
+        "baseUrl": "./src",
+        "paths": {
+            "@": ["./src/"],
+            "@utils": ["./src/utils/"],
+            "@api": ["./src/api/"],
+            "@locales": ["./src/locales/"],
+            "@storage": ["./src/storage/"],
+            "@screens": ["./src/screens/"],
+            "@navigation": ["./src/navigation/"],
+            "@components": ["./src/components/"],
+            "@assets": ["./src/assets/"],
+            "@hooks": ["./src/hooks/"]
+        }
+    },
+    "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
+}
