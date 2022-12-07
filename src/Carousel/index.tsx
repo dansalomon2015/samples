@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { StyleSheet, Text, View, Animated, Image, Dimensions, ScrollView } from "react-native";
-import BottomSheet, { BottomSheetScrollView } from "@gorhom/bottom-sheet";
+import FastImage from "react-native-fast-image";
 
 const { width, height } = Dimensions.get("screen");
 
@@ -71,7 +71,15 @@ export const Carousel = () => {
                     renderItem={({ item }) => {
                         return (
                             <View>
-                                <Image source={{ uri: item.image }} style={styles.image} />
+                                <FastImage
+                                    source={{
+                                        uri: item.image,
+                                        headers: { Authorization: "someAuthToken" },
+                                        priority: FastImage.priority.normal,
+                                    }}
+                                    resizeMode={FastImage.resizeMode.cover}
+                                    style={styles.image}
+                                />
                             </View>
                         );
                     }}
@@ -100,11 +108,11 @@ export const Carousel = () => {
 
             <View style={{ height: height - ITEM_HEIGHT, backgroundColor: "#fff", padding: 20 }}>
                 <ScrollView contentContainerStyle={{ flex: 1 }}>
-                    <Text style={{ fontSize: 16, fontWeight: "800", textTransform: "capitalize" }}>
+                    <Text style={{ fontSize: 16, fontWeight: "800", textTransform: "capitalize", color: "#000" }}>
                         {products[product].title}
                     </Text>
-                    <Text style={{ fontSize: 16 }}>{products[product].price}</Text>
-                    <Text style={{ marginVertical: 20, marginBottom: 10, lineHeight: 22 }}>
+                    <Text style={{ fontSize: 16, color: "#000" }}>{products[product].price}</Text>
+                    <Text style={{ marginVertical: 20, marginBottom: 10, lineHeight: 22, color: "#000" }}>
                         {products[product].description}
                     </Text>
                 </ScrollView>
