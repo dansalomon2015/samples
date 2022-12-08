@@ -2,9 +2,10 @@ import React from "react";
 import { SafeAreaView, StyleSheet } from "react-native";
 import { Carousel } from "./Carousel";
 import { MoviesCarousel } from "./MoviesCarousel";
+import { AnimatedTabsIncator } from "./AnimatedTabsIncator";
 
 const App = () => {
-    return <MoviesCarousel />;
+    return <AnimatedTabsIncator />;
 };
 
 const styles = StyleSheet.create({});

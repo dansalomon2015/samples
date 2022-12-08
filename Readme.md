@@ -4,4 +4,6 @@ Collection of UI compnents
 
 ## List
 
--   Animated Carousel [./src/carousel] inspired by @Catalin Miron
+-   [x] Animated Carousel [./src/Carousel] inspired by @Catalin Miron
+-   [x] Animated Movies Carousel [./src/MoviesCarousel] inspired by @Catalin Miron
+-   [x] Animated Tabs & Indicator [./src/AnimatedTabsIncator] inspired by @Catalin Miron
