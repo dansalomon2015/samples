@@ -74,7 +74,6 @@ export const Carousel = () => {
                                 <FastImage
                                     source={{
                                         uri: item.image,
-                                        headers: { Authorization: "someAuthToken" },
                                         priority: FastImage.priority.normal,
                                     }}
                                     resizeMode={FastImage.resizeMode.cover}
